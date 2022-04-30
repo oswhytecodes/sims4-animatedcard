@@ -24,14 +24,14 @@ img {
 }
 
 .vertical-line {
-border-left: 1px solid gray;
+  border-left: 1px solid gray;
   height: 25px;
 }
 .text-small {
   font-size: 0.7rem;
 }
 .text-bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 /* CARD STYLING */
 .card-container {
@@ -127,6 +127,7 @@ border-left: 1px solid gray;
   opacity: 0;
   bottom: 0;
   width: 100%;
+
 }
 
 .stream-info {
@@ -155,10 +156,9 @@ border-left: 1px solid gray;
   margin: 0.3em 0;
   letter-spacing: 1px;
 }
-.streamer-stat{
+.streamer-stat {
   color: gray;
 }
-
 
 button {
   display: flex;
@@ -192,7 +192,7 @@ button {
     opacity 100ms linear;
 
   transform: scale(1.4, 1.2);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .card-container:hover .back {
@@ -200,5 +200,5 @@ button {
   opacity: 1;
 }
 .card-container:hover .streamer:nth-of-type(1) {
-    transform: translateX(0);
+  transform: translateX(0);
 }
