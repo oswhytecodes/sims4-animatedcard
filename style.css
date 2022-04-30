@@ -123,7 +123,6 @@ border-left: 1px solid gray;
 .card-container .back {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   position: absolute;
   opacity: 0;
   bottom: 0;
@@ -158,19 +157,18 @@ border-left: 1px solid gray;
 }
 .streamer-stat{
   color: gray;
-
 }
 
 
 button {
   display: flex;
-
   margin: 2em auto;
-  padding: 5px 10px;
-  width: fit-content;
+  padding: 8px 12px;
   border: none;
+  color: var(--light-color);
+  font-weight: 600;
   border-radius: 50px;
-  background-color: cornflowerblue;
+  background-color: rgb(40, 88, 179);
 }
 
 /* HOVER EFFECTS */
@@ -194,7 +192,7 @@ button {
     opacity 100ms linear;
 
   transform: scale(1.4, 1.2);
-  opacity: 1;
+  opacity: .5;
 }
 
 .card-container:hover .back {
