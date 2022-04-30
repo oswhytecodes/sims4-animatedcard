@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap");
+:root {
+  --dark-color: #282828;
+  --light-color: #f2f2f2;
+
+  --light-gray: rgba(128, 128, 128, 0.9);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  /* outline: 1px solid red; */
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+img {
+  max-width: 100%;
+}
+
+.vertical-line {
+border-left: 1px solid gray;
+  height: 25px;
+}
+.text-small {
+  font-size: 0.7rem;
+}
+.text-bold {
+    font-weight: 700;
+}
+/* CARD STYLING */
+.card-container {
+  position: relative;
+  width: 12em;
+  /* overflow: hidden; */
+}
+/* FRONT OF CARD */
+.front {
+  /* hover */
+  transition: 200ms ease-in-out;
+}
+.rank {
+  position: absolute;
+  padding: 4px 6px 7px;
+  font-weight: 700;
+  z-index: 1000;
+  background-color: var(--light-gray);
+  display: inline;
+  right: 25px;
+  top: 0;
+  clip-path: polygon(100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
+
+  /* hover */
+  transition: 200ms cubic-bezier(0 15, 0.93, 0.67, 1);
+}
+
+/* Game Image and Header */
+.game-image {
+  border-radius: 5px;
+}
+.game-title {
+  text-align: left;
+  margin: 0.2em 0 0.8em;
+  font-weight: 700;
+}
+/* Streamer data  */
+.streaming-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.streaming-viewers i {
+  margin-right: 0.3em;
+  color: var(--light-gray);
+}
+.streaming-viewers {
+  display: flex;
+  align-items: center;
+}
+
+/*  streamer data - images */
+.current-streamers {
+  display: flex;
+  justify-content: space-evenly;
+}
+.streamer {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50px;
+  border: 2px solid var(--dark-color);
+  /* margin-left: 0.3em; */
+}
+.streamer:nth-of-type(1) {
+  transform: translateX(50%);
+  z-index: 1;
+}
+.streamer:nth-of-type(2) {
+  transform: translateX(25%);
+}
+
+/* BACKgROUND*/
+
+.background {
+  background-color: #234;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 5px;
+  overflow: hidden;
+  /* animation */
+  opacity: 0;
+}
+/* BACK OF CARD */
+.card-container .back {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.stream-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stream-stat {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1em 0;
+  width: 50%;
+}
+
+/* Streamer section */
+.streamers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.streamer-name {
+  text-align: center;
+  margin: 0.3em 0;
+  letter-spacing: 1px;
+}
+.streamer-stat{
+  color: gray;
+
+}
+
+
+button {
+  display: flex;
+
+  margin: 2em auto;
+  padding: 5px 10px;
+  width: fit-content;
+  border: none;
+  border-radius: 50px;
+  background-color: cornflowerblue;
+}
+
+/* HOVER EFFECTS */
+
+.card-container:hover .front {
+  transform: translateY(-150px) scale(0.8);
+}
+.card-container:hover .rank {
+  /* right: -30px;
+  top: -32px; */
+  transform: translate(200%, -110%);
+}
+.card-container:hover .streaming-data {
+  opacity: 0;
+}
+.card-container:hover .game-title {
+  text-align: center;
+}
+.card-container:hover .background {
+  transition: transform 200ms cubic-bezier(0 15, 0.93, 0.67, 1) ease-in,
+    opacity 100ms linear;
+
+  transform: scale(1.4, 1.2);
+  opacity: 1;
+}
+
+.card-container:hover .back {
+  bottom: 10px;
+  opacity: 1;
+}
+.card-container:hover .streamer:nth-of-type(1) {
+    transform: translateX(0);
+}
